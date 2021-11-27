@@ -1,14 +1,16 @@
 <template>
   <navbar></navbar>
+  <picturebar></picturebar>
   <router-view/>
 </template>
 
 <script>
 import Navbar from './components/Navbar'
+import Picturebar from './components/Picturebar'
 
 export default {
   name: 'App',
-  components: { Navbar }
+  components: { Navbar, Picturebar }
 }
 </script>
 
@@ -27,6 +29,7 @@ export default {
 
 #nav a {
   font-weight: bold;
+  padding: 300px;
   color: #2c3e50;
 }
 

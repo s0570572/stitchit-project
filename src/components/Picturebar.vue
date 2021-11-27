@@ -1,10 +1,11 @@
 <template>
   <div class="container-fluid">
-    <img src="/assets/threads.jpg" class="img-fluid" alt="Mouline threads">
+    <img alt="Mouline threads" class="img-fluid" src="../assets/threads.jpg">
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'Picturebar'
 }

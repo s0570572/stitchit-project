@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <img alt="Mouline threads" class="img-fluid" src="../assets/threads.jpg">
+    <img alt="Mouline threads" class="img-fluid" src="../assets/background.jpg">
   </div>
 </template>
 

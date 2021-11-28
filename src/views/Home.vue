@@ -1,5 +1,7 @@
 <template>
   <div id="intro">
+  </div>
+  <div id="main">
     <div id="textbox">
       <p class="text"><em><strong>Hello and welcome to the StitchIt! project!</strong></em></p>
       <p class="text"><em>This is where you can find a cross-stitch scheme of your liking for free. Just don't hesitate to go through all the different topic tabs to look for your favourite motives and choose the difficulty level that you want to tackle.</em></p>
@@ -22,14 +24,20 @@ export default {
 <style>
 #intro {
   background-image: url("../assets/background.jpg");
+  height: 10vh;
+}
+#main {
+  background-image: url("../assets/background.jpg");
   height: 100vh;
 }
 #textbox {
   background-color: white;
-  opacity: 0.4;
+  opacity: 0.7;
 }
 .text {
   color: black;
   opacity: 100;
+  align-content: center;
+  padding: 5px;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <topic-tab></topic-tab>
-  <accordeon></accordeon> // eventually move to a different component for the gallery view body with a router and add a padding
+  <div id="intro">
+    <accordeon></accordeon>
+  </div>
 </template>
 
 <script>
@@ -14,5 +16,8 @@ export default {
 </script>
 
 <style scoped>
-
+#intro {
+  background-color: #a1ba8b;
+  padding: 5%;
+}
 </style>

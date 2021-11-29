@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div>
     <img alt="Mouline threads" class="img-fluid" src="../assets/bar.jpg">
   </div>
 </template>

@@ -19,6 +19,6 @@ export default {
 <style>
 #intro {
   background-color: #a1ba8b;
-  height: 100%;
+  height: 80%;
 }
 </style>

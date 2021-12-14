@@ -1,4 +1,4 @@
-<template>
+<template id="background">
   <navbar></navbar>
   <picturebar></picturebar>
   <router-view/>
@@ -35,5 +35,9 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+#background {
+  background-color: #a1ba8b;
+  height: 100%;
 }
 </style>

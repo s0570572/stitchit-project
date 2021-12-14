@@ -7,18 +7,22 @@
         </button>
       </h2>
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder for a table containing information about the entry (separate component).</div>
+        <div class="accordion-body"><listalignment></listalignment></div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Listalignment from './Listalignment'
+
 export default {
-  name: 'Accordeon'
+  name: 'Accordeon',
+  components: {
+    Listalignment
+  }
 }
 </script>
 
 <style scoped>
-
 </style>

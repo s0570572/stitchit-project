@@ -16,5 +16,6 @@ export default {
 <style scoped>
 #intro {
   background-color: #a1ba8b;
+  padding: 50px 300px 461px;
 }
 </style>

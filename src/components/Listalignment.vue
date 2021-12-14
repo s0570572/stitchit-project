@@ -4,9 +4,7 @@
     <dd class="col-sm-9">Placeholder for the title.</dd>
 
     <dt class="col-sm-3">Description:</dt>
-    <dd class="col-sm-9">
-      <p>Placeholder for the description.</p>
-    </dd>
+    <dd class="col-sm-9">Placeholder for the description.</dd>
 
     <dt class="col-sm-3">Topic:</dt>
     <dd class="col-sm-9">Placeholder for the topic.</dd>

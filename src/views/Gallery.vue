@@ -1,8 +1,6 @@
 <template>
   <topic-tab></topic-tab>
-  <div id="intro">
-    <accordeon></accordeon>
-  </div>
+  <accordeon id="intro"></accordeon>
 </template>
 
 <script>
@@ -18,6 +16,5 @@ export default {
 <style scoped>
 #intro {
   background-color: #a1ba8b;
-  padding: 5%;
 }
 </style>

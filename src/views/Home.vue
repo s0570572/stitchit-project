@@ -18,10 +18,8 @@ export default {
 
 <style>
 #textbox {
-  background-color: white;
-  opacity: 0.5;
   align-content: center;
-  padding: 20px;
+  padding: 175px 150px 182px;
 }
 .text {
   color: black;

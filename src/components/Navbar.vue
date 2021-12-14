@@ -10,6 +10,7 @@
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/entries">Gallery</router-link>
           <router-link class="nav-link" to="/about">About</router-link>
+          <button type="button" class="btn btn-success" id="button">Add</button>
         </div>
       </div>
     </div>
@@ -23,5 +24,7 @@ export default {
 </script>
 
 <style scoped>
-
+#button {
+  justify-content: space-between;
+}
 </style>

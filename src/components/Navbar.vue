@@ -9,8 +9,8 @@
         <div class="navbar-nav">
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/entries">Gallery</router-link>
-          <router-link class="nav-link" to="/about">About</router-link>
-          <button type="button" class="btn btn-success" id="button">Add</button>
+          <router-link class="nav-link" id="lastitem" to="/about">About</router-link>
+          <button type="button" class="btn btn-success">Add</button>
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style scoped>
-#button {
-  justify-content: space-between;
+#lastitem {
+  padding-right: 1180px;
 }
 </style>

@@ -138,4 +138,11 @@ export default {
 #button {
   margin-bottom: 14px;
 }
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 80%;
+}
 </style>

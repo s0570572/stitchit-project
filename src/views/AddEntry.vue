@@ -143,7 +143,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  --bs-gutter-x: 1.5rem;
-  margin-right: calc(-.5 * var(--bs-gutter-x));
+  width: 100%;
 }
 </style>

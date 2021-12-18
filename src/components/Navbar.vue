@@ -10,7 +10,7 @@
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/entries">Gallery</router-link>
           <router-link class="nav-link" id="lastitem" to="/about">About</router-link>
-          <button type="button" class="btn btn-success">Add</button>
+          <button type="button" class="btn btn-success" onclick="location.href='../add-entry'">Add</button>
         </div>
       </div>
     </div>

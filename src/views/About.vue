@@ -1,6 +1,6 @@
 <template>
   <div id="intro">
-    <h3><strong>About StitchIt!</strong></h3>
+    <h3 id="headingpadding"><strong>About StitchIt!</strong></h3>
     <figure id="text">
       <p>The StitchIt! project is a non-profit project for sharing free stitching schemes. Schemes shared on this
         platform are not subject for sale.</p>
@@ -18,5 +18,8 @@
 #text {
   text-align: left;
   padding: 5px;
+}
+#headingpadding {
+  padding-bottom: 20px;
 }
 </style>

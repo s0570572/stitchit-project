@@ -1,7 +1,7 @@
 <template>
   <dl class="row">
     <dt class="col-sm-3">Title:</dt>
-    <dd class="col-sm-9">Placeholder for the title.</dd>
+    <dd class="col-sm-8">Placeholder for the title.</dd>
 
     <dt class="col-sm-3">Description:</dt>
     <dd class="col-sm-9">Placeholder for the description.</dd>

@@ -1,68 +1,21 @@
 <template>
-  <div id="panel">
-    <ul class="nav nav-tabs">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-animals'" role="button" aria-expanded="false">Animals</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Beginner</a></li>
-          <li><a class="dropdown-item" href="#">Medium</a></li>
-          <li><a class="dropdown-item" href="#">Advanced</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Show all items</a></li>
-       </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-people'" role="button" aria-expanded="false">People</a>
-       <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Beginner</a></li>
-          <li><a class="dropdown-item" href="#">Medium</a></li>
-          <li><a class="dropdown-item" href="#">Advanced</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Show all items</a></li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-landscape'" role="button" aria-expanded="false">Landscape</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Beginner</a></li>
-          <li><a class="dropdown-item" href="#">Medium</a></li>
-          <li><a class="dropdown-item" href="#">Advanced</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Show all items</a></li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-architecture'" role="button" aria-expanded="false">Architecture</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Beginner</a></li>
-          <li><a class="dropdown-item" href="#">Medium</a></li>
-          <li><a class="dropdown-item" href="#">Advanced</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Show all items</a></li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-still-life'" role="button" aria-expanded="false">Still-life</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Beginner</a></li>
-          <li><a class="dropdown-item" href="#">Medium</a></li>
-          <li><a class="dropdown-item" href="#">Advanced</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Show all items</a></li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-miscellaneous'" role="button" aria-expanded="false">Miscellaneous</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Beginner</a></li>
-          <li><a class="dropdown-item" href="#">Medium</a></li>
-          <li><a class="dropdown-item" href="#">Advanced</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Show all items</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav">
+          <router-link class="nav-link" to="/entries-animals">Animals</router-link>
+          <router-link class="nav-link" to="/entries-people">People</router-link>
+          <router-link class="nav-link" to="/entries-landscape">Landscape</router-link>
+          <router-link class="nav-link" to="/entries-architecture">Architecture</router-link>
+          <router-link class="nav-link" to="/entries-still-life">Still-life</router-link>
+          <router-link class="nav-link" id="lastitem" to="/entries-miscellaneous">Miscellaneous</router-link>
+        </div>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -73,7 +26,5 @@ export default {
 </script>
 
 <style scoped>
-#panel {
-  background-color: white;
-}
+
 </style>

@@ -93,7 +93,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-.5 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
   margin-left: calc(-.5 * var(--bs-gutter-x));
   margin-bottom: 1px;
   text-align: left;

@@ -2,7 +2,7 @@
   <div id="panel">
     <ul class="nav nav-tabs">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Animals</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-animals'" role="button" aria-expanded="false">Animals</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Beginner</a></li>
           <li><a class="dropdown-item" href="#">Medium</a></li>
@@ -12,7 +12,7 @@
        </ul>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">People</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-people'" role="button" aria-expanded="false">People</a>
        <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Beginner</a></li>
           <li><a class="dropdown-item" href="#">Medium</a></li>
@@ -22,7 +22,7 @@
         </ul>
       </li>
       <li class="nav-item dropdown">
-       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Landscape</a>
+       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-landscape'" role="button" aria-expanded="false">Landscape</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Beginner</a></li>
           <li><a class="dropdown-item" href="#">Medium</a></li>
@@ -32,7 +32,7 @@
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Architecture</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-architecture'" role="button" aria-expanded="false">Architecture</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Beginner</a></li>
           <li><a class="dropdown-item" href="#">Medium</a></li>
@@ -42,7 +42,7 @@
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Still-life</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-still-life'" role="button" aria-expanded="false">Still-life</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Beginner</a></li>
           <li><a class="dropdown-item" href="#">Medium</a></li>
@@ -52,7 +52,7 @@
         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Miscellaneous</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" onclick="location.href='/entries-miscellaneous'" role="button" aria-expanded="false">Miscellaneous</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Beginner</a></li>
           <li><a class="dropdown-item" href="#">Medium</a></li>

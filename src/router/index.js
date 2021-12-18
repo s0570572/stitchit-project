@@ -4,6 +4,12 @@ import About from '../views/About.vue'
 import Gallery from '../views/Gallery.vue'
 import AddEntry from '../views/AddEntry'
 import AddSuccess from '../views/AddSuccess'
+import GalleryAnimals from '../views/GalleryAnimals'
+import GalleryArchitecture from '../views/GalleryArchitecture'
+import GalleryLandscape from '../views/GalleryLandscape'
+import GalleryMiscellaneous from '../views/GalleryMiscellaneous'
+import GalleryPeople from '../views/GalleryPeople'
+import GalleryStilllife from '../views/GalleryStilllife'
 
 const routes = [
   {
@@ -30,6 +36,36 @@ const routes = [
     path: '/add-success',
     name: 'Success',
     component: AddSuccess
+  },
+  {
+    path: '/entries-animals',
+    name: 'GalleryAnimals',
+    component: GalleryAnimals
+  },
+  {
+    path: '/entries-architecture',
+    name: 'GalleryArchitecture',
+    component: GalleryArchitecture
+  },
+  {
+    path: '/entries-landscape',
+    name: 'GalleryLandscape',
+    component: GalleryLandscape
+  },
+  {
+    path: '/entries-miscellaneous',
+    name: 'GalleryMiscellaneous',
+    component: GalleryMiscellaneous
+  },
+  {
+    path: '/entries-people',
+    name: 'GalleryPeople',
+    component: GalleryPeople
+  },
+  {
+    path: '/entries-still-life',
+    name: 'GalleryStilllife',
+    component: GalleryStilllife
   }
 ]
 

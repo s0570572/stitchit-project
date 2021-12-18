@@ -143,6 +143,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  width: 80%;
+  width: 50%;
 }
 </style>

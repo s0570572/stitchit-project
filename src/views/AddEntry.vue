@@ -30,11 +30,12 @@
         <div class="input-group mb-3">
           <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Please choose the topic from the drop-down menu</button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
+            <li><a class="dropdown-item" href="#">Animals</a></li>
+            <li><a class="dropdown-item" href="#">People</a></li>
+            <li><a class="dropdown-item" href="#">Landscape</a></li>
+            <li><a class="dropdown-item" href="#">Architecture</a></li>
+            <li><a class="dropdown-item" href="#">Still life</a></li>
+            <li><a class="dropdown-item" href="#">Miscellaneous</a></li>
           </ul>
           <input type="text" class="form-control" aria-label="Text input with dropdown button">
         </div>
@@ -45,11 +46,9 @@
         <div class="input-group mb-3">
           <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Please choose the difficulty level from the dropdown menu</button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
+            <li><a class="dropdown-item" href="#">Beginner</a></li>
+            <li><a class="dropdown-item" href="#">Medium</a></li>
+            <li><a class="dropdown-item" href="#">Advanced</a></li>
           </ul>
           <input type="text" class="form-control" aria-label="Text input with dropdown button">
         </div>
@@ -58,7 +57,7 @@
       <dt class="col-sm-3">Link(*)</dt>
       <dd class="col-sm-7">
         <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default2">Please paste the link to your stitching scheme here</span>
+          <span class="input-group-text" id="inputGroup-sizing-default2">Please paste the link here</span>
           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
       </dd>
@@ -78,11 +77,15 @@ export default {
 <style scoped>
 #headingpadding {
   padding-top: 45px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 .text {
   align-content: center;
   padding: 1px 150px 1px;
+}
+.col-sm-3 {
+  flex: 0 0 auto;
+  width: 23%;
 }
 .row {
   --bs-gutter-x: 1.5rem;
@@ -133,6 +136,6 @@ export default {
   border: 1px solid #2E3C50;
 }
 #button {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 </style>

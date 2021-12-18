@@ -62,7 +62,7 @@
         </div>
       </dd>
     </dl>
-    <button type="button" class="btn btn-light" id="button">Submit</button>
+    <button type="button" class="btn btn-light" id="button" onclick="location.href='../add-success'">Submit</button>
   </div>
 
 </template>

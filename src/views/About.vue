@@ -13,7 +13,7 @@
 <style>
 #intro {
   background-color: #a1ba8b;
-  padding: 14%;
+  padding: 13.1%;
 }
 #text {
   text-align: left;

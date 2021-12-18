@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Gallery from '../views/Gallery.vue'
 import AddEntry from '../views/AddEntry'
+import AddSuccess from '../views/AddSuccess'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/add-entry',
     name: 'Add entry',
     component: AddEntry
+  },
+  {
+    path: '/add-success',
+    name: 'Success',
+    component: AddSuccess
   }
 ]
 

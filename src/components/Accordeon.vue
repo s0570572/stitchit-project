@@ -17,29 +17,29 @@
       <label class="form-check-label" for="inlineCheckbox4">Advanced</label>
     </div>
     <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
+      <div class="accordion-item" v-for="entry in entries" :key="entry.id">
         <h2 class="accordion-header" id="flush-headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Entry #1
+            Entry # {{ entry.id }}
           </button>
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
             <dl class="row">
               <dt class="col-sm-3">Title:</dt>
-              <dd class="col-sm-8">Placeholder for the title.</dd>
+              <dd class="col-sm-8">{{ entry.title }}</dd>
 
               <dt class="col-sm-3">Description:</dt>
-              <dd class="col-sm-9">Placeholder for the description.</dd>
+              <dd class="col-sm-9">{{ entry.description }}</dd>
 
               <dt class="col-sm-3">Topic:</dt>
-              <dd class="col-sm-9">Placeholder for the topic.</dd>
+              <dd class="col-sm-9">{{ entry.topic }}</dd>
 
               <dt class="col-sm-3">Difficulty level:</dt>
-              <dd class="col-sm-9">Placeholder for the difficulty level.</dd>
+              <dd class="col-sm-9">{{ entry.difficulty }}</dd>
 
               <dt class="col-sm-3">Link:</dt>
-              <dd class="col-sm-9">Placeholder for the link.</dd>
+              <dd class="col-sm-9">{{ entry.link }}</dd>
             </dl>
           </div>
         </div>
@@ -53,7 +53,36 @@
 
 export default {
   name: 'Accordeon',
-  components: { }
+  data () {
+    return {
+      entries: [
+        {
+          id: 1,
+          title: 'Autumn in Berlin',
+          description: '',
+          topic: 'landscape',
+          difficulty: 'medium',
+          link: 'www.google.com'
+        },
+        {
+          id: 2,
+          title: 'Woman in red hat',
+          description: 'A nice portrait for beginners',
+          topic: 'people',
+          difficulty: 'beginner',
+          link: 'www.google.com'
+        },
+        {
+          id: 3,
+          title: 'Puppy family',
+          description: 'While many have started embroidery stitching a cute puppy, this motive is much more elaborate and a must-do for all dog lovers!',
+          topic: 'animals',
+          difficulty: 'advanced',
+          link: 'www.google.com'
+        }
+      ]
+    }
+  }
 }
 </script>
 

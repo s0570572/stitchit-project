@@ -55,33 +55,21 @@ export default {
   name: 'Accordeon',
   data () {
     return {
-      entries: [
-        {
-          id: 1,
-          title: 'Autumn in Berlin',
-          description: '',
-          topic: 'landscape',
-          difficulty: 'medium',
-          link: 'www.google.com'
-        },
-        {
-          id: 2,
-          title: 'Woman in red hat',
-          description: 'A nice portrait for beginners',
-          topic: 'people',
-          difficulty: 'beginner',
-          link: 'www.google.com'
-        },
-        {
-          id: 3,
-          title: 'Puppy family',
-          description: 'While many have started embroidery stitching a cute puppy, this motive is much more elaborate and a must-do for all dog lovers!',
-          topic: 'animals',
-          difficulty: 'advanced',
-          link: 'www.google.com'
-        }
-      ]
+      entries: []
     }
+  },
+  mounted () {
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    }
+
+    fetch('http://localhost:8080/api/v1/entries', requestOptions)
+      .then(response => response.json())
+      .then(result => result.forEach(entry =>
+        this.entries.push(entry)
+      ))
+      .catch(error => console.log('error', error))
   }
 }
 </script>

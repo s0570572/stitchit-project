@@ -55,16 +55,7 @@ export default {
   name: 'Accordeon',
   data () {
     return {
-      entries: [
-        /* {
-          id: 1,
-          title: 'Little Puppy',
-          description: '',
-          topic: 'animals',
-          difficulty: 'beginner',
-          link: 'www.google.com'
-        } */
-      ]
+      entries: []
     }
   },
   mounted () {

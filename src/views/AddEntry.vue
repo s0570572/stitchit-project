@@ -34,7 +34,7 @@
             <li><a class="dropdown-item" href="#">People</a></li>
             <li><a class="dropdown-item" href="#">Landscape</a></li>
             <li><a class="dropdown-item" href="#">Architecture</a></li>
-            <li><a class="dropdown-item" href="#">Still life</a></li>
+            <li><a class="dropdown-item" href="#">Still-life</a></li>
             <li><a class="dropdown-item" href="#">Miscellaneous</a></li>
           </ul>
           <input type="text" class="form-control" aria-label="Text input with dropdown button">
@@ -69,8 +69,7 @@
 
 <script>
 export default {
-  name: 'AddEntry',
-  components: {}
+  name: 'AddEntry'
 }
 </script>
 

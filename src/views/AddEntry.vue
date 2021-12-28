@@ -13,7 +13,7 @@
       <dd class="col-sm-7">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Please write the title here</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="title">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="title" v-model="title">
         </div>
       </dd>
 
@@ -21,14 +21,14 @@
       <dd class="col-sm-7">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default1">Please write a short description</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="description">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="description" v-model="description">
         </div>
       </dd>
 
       <dt class="col-sm-3">Topic(*)</dt>
       <dd class="col-sm-7">
         <div class="input-group mb-3">
-          <select id="topic" class="form-select">
+          <select id="topic" class="form-select" v-model="topic">
             <option value="" selected disabled>Please choose the topic from the dropdown menu</option>
             <option value="ANIMALS">Animals</option>
             <option value="PEOPLE">People</option>
@@ -43,7 +43,7 @@
       <dt class="col-sm-3">Difficulty level(*)</dt>
       <dd class="col-sm-7">
         <div class="input-group mb-3">
-          <select id="difficulty" class="form-select">
+          <select id="difficulty" class="form-select" v-model="difficulty">
             <option value="" selected disabled>Please choose the difficulty level from the dropdown menu</option>
             <option value="BEGINNER">Beginner</option>
             <option value="MEDIUM">Medium</option>
@@ -56,18 +56,37 @@
       <dd class="col-sm-7">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default2">Please paste the link here</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link" v-model="link">
         </div>
       </dd>
     </dl>
-    <button type="button" class="btn btn-light" id="button" onclick="location.href='../add-success'">Submit</button>
+    <button type="submit" class="btn btn-light" onclick="location.href='../add-success'" id="button" @click.prevent="createEntry">Submit</button>
+    <button class="btn btn-danger" type="reset" id="button2">Reset</button>
   </div>
 
 </template>
 
 <script>
 export default {
-  name: 'AddEntry'
+  name: 'AddEntry',
+  data () {
+    return {
+      title: '',
+      description: '',
+      topic: '',
+      difficulty: '',
+      link: ''
+    }
+  },
+  methods: {
+    createEntry () {
+      console.log(this.title)
+      console.log(this.description)
+      console.log(this.topic)
+      console.log(this.difficulty)
+      console.log(this.link)
+    }
+  }
 }
 </script>
 
@@ -146,6 +165,12 @@ export default {
 }
 #button {
   margin-bottom: 14px;
+  margin-right: 15px;
+  border: 1px solid #2E3C50;
+}
+#button2 {
+  margin-bottom: 14px;
+  border: 1px solid #2E3C50;
 }
 .input-group {
   position: relative;

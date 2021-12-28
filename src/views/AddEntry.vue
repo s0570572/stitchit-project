@@ -13,7 +13,7 @@
       <dd class="col-sm-7">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Please write the title here</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="title">
         </div>
       </dd>
 
@@ -21,36 +21,34 @@
       <dd class="col-sm-7">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default1">Please write a short description</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="description">
         </div>
       </dd>
 
       <dt class="col-sm-3">Topic(*)</dt>
       <dd class="col-sm-7">
         <div class="input-group mb-3">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Please choose the topic from the drop-down menu</button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Animals</a></li>
-            <li><a class="dropdown-item" href="#">People</a></li>
-            <li><a class="dropdown-item" href="#">Landscape</a></li>
-            <li><a class="dropdown-item" href="#">Architecture</a></li>
-            <li><a class="dropdown-item" href="#">Still-life</a></li>
-            <li><a class="dropdown-item" href="#">Miscellaneous</a></li>
-          </ul>
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
+          <select id="topic" class="form-select">
+            <option value="" selected disabled>Please choose the topic from the dropdown menu</option>
+            <option value="ANIMALS">Animals</option>
+            <option value="PEOPLE">People</option>
+            <option value="LANDSCAPE">Landscape</option>
+            <option value="ARCHITECTURE">Architecture</option>
+            <option value="STILLLIFE">Still-life</option>
+            <option value="MISCELLANEOUS">Miscellaneous</option>
+          </select>
         </div>
       </dd>
 
       <dt class="col-sm-3">Difficulty level(*)</dt>
       <dd class="col-sm-7">
         <div class="input-group mb-3">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Please choose the difficulty level from the dropdown menu</button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Beginner</a></li>
-            <li><a class="dropdown-item" href="#">Medium</a></li>
-            <li><a class="dropdown-item" href="#">Advanced</a></li>
-          </ul>
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
+          <select id="difficulty" class="form-select">
+            <option value="" selected disabled>Please choose the difficulty level from the dropdown menu</option>
+            <option value="BEGINNER">Beginner</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="ADVANCED">Advanced</option>
+          </select>
         </div>
       </dd>
 
@@ -91,10 +89,7 @@ export default {
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-.5 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x));
-  margin-bottom: 1px;
+  margin: calc(-.5 * var(--bs-gutter-y)) calc(-.5 * var(--bs-gutter-x)) 1px;
   text-align: left;
   padding: 5px 70px 1px;
 }
@@ -129,10 +124,25 @@ export default {
   border-radius: 0.25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.btn-outline-secondary {
-  background-color: #e9ecef;
+.form-select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
   color: #212529;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
   border: 1px solid #2E3C50;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 #button {
   margin-bottom: 14px;

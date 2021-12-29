@@ -85,6 +85,29 @@ export default {
       console.log(this.topic)
       console.log(this.difficulty)
       console.log(this.link)
+
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries'
+
+      const myHeaders = new Headers()
+      myHeaders.append('Content-Type', 'application/json')
+
+      const payload = JSON.stringify({
+        title: this.title,
+        description: this.description,
+        topic: this.topic,
+        difficulty: this.difficulty,
+        link: this.link
+      })
+
+      const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: payload,
+        redirect: 'follow'
+      }
+
+      fetch(endpoint, requestOptions)
+        .catch(error => console.log('error', error))
     }
   }
 }

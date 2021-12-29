@@ -60,7 +60,7 @@
         </div>
       </dd>
     </dl>
-    <button type="submit" class="btn btn-light" onclick="location.href='../add-success'" id="button" @click.prevent="createEntry">Submit</button>
+    <button type="submit" class="btn btn-light" onclick="location.href='../add-success'" id="button" @click="createEntry">Submit</button>
     <button class="btn btn-danger" type="reset" id="button2">Reset</button>
   </div>
 
@@ -80,12 +80,6 @@ export default {
   },
   methods: {
     createEntry () {
-      console.log(this.title)
-      console.log(this.description)
-      console.log(this.topic)
-      console.log(this.difficulty)
-      console.log(this.link)
-
       const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries'
 
       const myHeaders = new Headers()

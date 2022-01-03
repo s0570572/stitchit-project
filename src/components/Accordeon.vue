@@ -77,7 +77,7 @@ export default {
 
 <style scoped>
 .background {
-  background-color: #a1ba8c;
+  background-color: #a1ba8b;
   height: 100%;
 }
 #abstand {

@@ -6,6 +6,8 @@
       also add a short description of the piece if you like. For technical reasons, it is only possible to host links to
       external cloud services here so please first upload your jpg-file to your cloud service (e.g. Google Drive, iCloud etc.)
       and then copy the link to the file into the respective field below.</p>
+    <p>Finally, think of a unique password and note it somewhere safe. You would need it in case you want to delete your entry
+      some time in the future. This should prevent other people from deleting your entries.</p>
     <p>Compulsory fields are marked with (*).</p>
     <p></p>
     <dl class="row">
@@ -57,6 +59,14 @@
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default2">Please paste the link here</span>
           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link" v-model="link">
+        </div>
+      </dd>
+
+      <dt class="col-sm-3">Password(*)</dt>
+      <dd class="col-sm-7">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default3">Please enter a unique password here</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link1" v-model="link">
         </div>
       </dd>
     </dl>

@@ -10,6 +10,7 @@ import GalleryLandscape from '../views/GalleryLandscape'
 import GalleryMiscellaneous from '../views/GalleryMiscellaneous'
 import GalleryPeople from '../views/GalleryPeople'
 import GalleryStilllife from '../views/GalleryStilllife'
+import DeleteEntry from '../views/DeleteEntry'
 
 const routes = [
   {
@@ -66,6 +67,11 @@ const routes = [
     path: '/entries-still-life',
     name: 'GalleryStilllife',
     component: GalleryStilllife
+  },
+  {
+    path: '/delete-entry',
+    name: 'DeleteEntry',
+    component: DeleteEntry
   }
 ]
 

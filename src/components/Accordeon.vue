@@ -17,13 +17,23 @@
       <label class="form-check-label" for="inlineCheckbox4">Advanced</label>
     </div>
     <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item" v-for="entry in entries" :key="entry.id">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+      <div class="accordion-item" v-for="entry in entries" :key="entry.entryid">
+        <h2 class="accordion-header" :id="'flush-heading' + entry.entryid">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            :data-bs-target="'#flush-collapse'+entry.entryid"
+            aria-expanded="false"
+            :aria-controls="'flush-collapse-'+entry.entryid">
             {{ entry.title }}
           </button>
         </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div
+          :id="'flush-collapse'+entry.entryid"
+          class="accordion-collapse collapse"
+          :aria-labelledby="'flush-heading'+entry.entryid"
+          data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
             <dl class="row">
               <dt class="col-sm-3">Title:</dt>

@@ -20,7 +20,7 @@ export default {
 <style>
 #textbox {
   align-content: center;
-  padding: 175px 150px 182px;
+  padding: 175px 150px 170px;
 }
 .text {
   align-content: center;

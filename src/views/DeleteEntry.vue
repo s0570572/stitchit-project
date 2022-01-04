@@ -1,8 +1,8 @@
 <template>
   <h3 id="headingpadding"><strong>Delete Entry</strong></h3>
   <div id="textbox">
-    <p>What a pity! Are sure you want to delete your stitching scheme?</p>
-    <p>If yes, please enter the unique password you created for this particular entry while uploading it on this platform
+    <p>What a pity! Are sure you want to delete your stitching scheme?
+      If yes, please enter the unique password you created for this particular entry while uploading it on this platform
       in the field below.</p>
     <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="Password" aria-label="Kennwort" aria-describedby="basic-addon2">
@@ -24,7 +24,7 @@ export default {
 }
 #textbox {
   align-content: center;
-  padding: 5px 150px 158px;
+  padding: 5px 150px 173px;
 }
 .input-group>.form-control, .input-group>.form-select {
   position: relative;

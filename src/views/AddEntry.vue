@@ -66,7 +66,7 @@
       <dd class="col-sm-7">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default3">Please enter a unique password here</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link1" v-model="link">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link1" v-model="kennwort">
         </div>
       </dd>
     </dl>

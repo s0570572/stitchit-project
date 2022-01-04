@@ -5,15 +5,43 @@
       If yes, please enter the unique password you created for this particular entry while uploading it on this platform
       in the field below.</p>
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Password" aria-label="Kennwort" aria-describedby="basic-addon2">
+      <input type="text" class="form-control" placeholder="Password" aria-label="Kennwort" aria-describedby="basic-addon2" v-model="kennwort">
     </div>
-    <button class="btn btn-danger" type="submit" id="button">Delete irrevocably</button>
+    <button class="btn btn-danger" type="submit" id="button" @click = deleteEntry>Delete irrevocably</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DeleteEntry'
+  name: 'DeleteEntry',
+  data () {
+    return {
+      kennwort: ''
+    }
+  },
+  methods: {
+    deleteEntry () {
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries/{entryid}'
+
+      const myHeaders = new Headers()
+      myHeaders.append('Content-Type', 'application/json')
+
+      const payload = JSON.stringify({
+        entryid: this.entryid,
+        kennwort: this.kennwort
+      })
+
+      const requestOptions = {
+        method: 'DELETE',
+        headers: myHeaders,
+        body: payload,
+        redirect: 'follow'
+      }
+
+      fetch(endpoint, requestOptions)
+        .catch(error => console.log('error', error))
+    }
+  }
 }
 </script>
 

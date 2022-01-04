@@ -16,6 +16,7 @@ export default {
   name: 'DeleteEntry',
   data () {
     return {
+      id: '',
       kennwort: ''
     }
   },
@@ -54,7 +55,7 @@ export default {
   align-content: center;
   padding: 5px 150px 173px;
 }
-.input-group>.form-control, .input-group>.form-select {
+.input-group>.form-control {
   position: relative;
   flex: 1 1 auto;
   width: 1%;

@@ -39,32 +39,32 @@ const routes = [
     component: AddSuccess
   },
   {
-    path: '/entries-animals',
+    path: '/entries/animals',
     name: 'GalleryAnimals',
     component: GalleryAnimals
   },
   {
-    path: '/entries-architecture',
+    path: '/entries/architecture',
     name: 'GalleryArchitecture',
     component: GalleryArchitecture
   },
   {
-    path: '/entries-landscape',
+    path: '/entries/landscape',
     name: 'GalleryLandscape',
     component: GalleryLandscape
   },
   {
-    path: '/entries-miscellaneous',
+    path: '/entries/miscellaneous',
     name: 'GalleryMiscellaneous',
     component: GalleryMiscellaneous
   },
   {
-    path: '/entries-people',
+    path: '/entries/people',
     name: 'GalleryPeople',
     component: GalleryPeople
   },
   {
-    path: '/entries-still-life',
+    path: '/entries/stilllife',
     name: 'GalleryStilllife',
     component: GalleryStilllife
   },

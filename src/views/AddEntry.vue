@@ -61,14 +61,6 @@
           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link" v-model="link">
         </div>
       </dd>
-
-      <dt class="col-sm-3">Password(*)</dt>
-      <dd class="col-sm-7">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default3">Please enter a unique password here</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link1" v-model="kennwort">
-        </div>
-      </dd>
     </dl>
     <button type="submit" class="btn btn-light" onclick="location.href='../add-success'" id="button" @click="createEntry">Submit</button>
     <button class="btn btn-danger" type="reset" id="button2">Reset</button>

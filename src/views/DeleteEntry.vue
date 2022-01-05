@@ -12,12 +12,15 @@ export default {
   name: 'DeleteEntry',
   data () {
     return {
-      id: ''
+      entryid: this.$route.params.entryid
     }
   },
+  // props: {
+  //  entryid: this.$route.params.entryid
+  // },
   methods: {
     deleteEntry () {
-      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries/{entryid}'
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries/' + this.$route.params.entryid // + dynamic variable from the uri
 
       const myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')

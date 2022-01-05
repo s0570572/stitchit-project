@@ -69,8 +69,9 @@ const routes = [
     component: GalleryStilllife
   },
   {
-    path: '/delete-entry',
+    path: '/delete-entry/:entryid',
     name: 'DeleteEntry',
+    props: true,
     component: DeleteEntry
   }
 ]

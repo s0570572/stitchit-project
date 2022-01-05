@@ -51,7 +51,7 @@
               <dt class="col-sm-3">Link:</dt>
               <dd class="col-sm-9">{{ entry.link }}</dd>
 
-              <button class="btn" type="submit" onclick="location.href='../delete-entry'">Delete</button>
+              <router-link class="btn" :to="{name: 'DeleteEntry', params: { entryid: entry.entryid },}"> Delete </router-link>
             </dl>
           </div>
         </div>

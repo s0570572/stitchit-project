@@ -3,7 +3,7 @@
   <div id="textbox">
     <p>What a pity! Are sure you want to delete your stitching scheme? </p>
     <p>If yes, please press the button below.</p>
-    <button class="btn btn-danger" type="submit" id="button" @click = deleteEntry onclick="location.href='../entries'">Delete irrevocably</button>
+    <button class="btn btn-danger" type="submit" id="button" @click = "deleteEntry" onclick="location.href='../entries'">Delete irrevocably</button>
   </div>
 </template>
 
@@ -22,18 +22,14 @@ export default {
       const myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')
 
-      const payload = JSON.stringify({
-        entryid: this.entryid
-      })
-
       const requestOptions = {
         method: 'DELETE',
-        headers: myHeaders,
-        body: payload,
         redirect: 'follow'
       }
 
       fetch(endpoint, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
         .catch(error => console.log('error', error))
     }
   }

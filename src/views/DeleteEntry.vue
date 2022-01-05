@@ -3,10 +3,7 @@
   <div id="textbox">
     <p>What a pity! Are sure you want to delete your stitching scheme? </p>
     <p>If yes, please press the button below.</p>
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Password" aria-label="Kennwort" aria-describedby="basic-addon2" v-model="kennwort">
-    </div>
-    <button class="btn btn-danger" type="submit" id="button" @click = deleteEntry>Delete irrevocably</button>
+    <button class="btn btn-danger" type="submit" id="button" @click = deleteEntry onclick="location.href='../entries'">Delete irrevocably</button>
   </div>
 </template>
 
@@ -50,15 +47,7 @@ export default {
 }
 #textbox {
   align-content: center;
-  padding: 5px 150px 173px;
-}
-.input-group>.form-control {
-  position: relative;
-  flex: 1 1 auto;
-  width: 1%;
-  min-width: 0;
-  margin: 10px 450px 5px;
-  border: 1px solid #2E3C50;
+  padding: 5px 150px 227px;
 }
 #button {
   margin-top: 5px;

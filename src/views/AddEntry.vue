@@ -8,59 +8,66 @@
       and then copy the link to the file into the respective field below.</p>
     <p>Compulsory fields are marked with (*).</p>
     <p></p>
-    <dl class="row">
-      <dt class="col-sm-3">Title(*)</dt>
-      <dd class="col-sm-7">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Please write the title here</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="title" v-model="title">
-        </div>
-      </dd>
+    <form class="text-start needs-validation" novalidate>
+      <dl class="row">
+        <dt class="col-sm-3">Title(*)</dt>
+        <dd class="col-sm-7">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Please write the title here</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="title" v-model="title" required>
+            <div class="invalid-feedback">Please provide a title.</div>
+          </div>
+        </dd>
 
-      <dt class="col-sm-3">Description</dt>
-      <dd class="col-sm-7">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default1">Please write a short description</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="description" v-model="description">
-        </div>
-      </dd>
+        <dt class="col-sm-3">Description</dt>
+        <dd class="col-sm-7">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default1">Please write a short description</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="description" v-model="description">
+          </div>
+        </dd>
 
-      <dt class="col-sm-3">Topic(*)</dt>
-      <dd class="col-sm-7">
-        <div class="input-group mb-3">
-          <select id="topic" class="form-select" v-model="topic">
-            <option value="" selected disabled>Please choose the topic from the dropdown menu</option>
-            <option value="ANIMALS">Animals</option>
-            <option value="PEOPLE">People</option>
-            <option value="LANDSCAPE">Landscape</option>
-            <option value="ARCHITECTURE">Architecture</option>
-            <option value="STILLLIFE">Still-life</option>
-            <option value="MISCELLANEOUS">Miscellaneous</option>
-          </select>
-        </div>
-      </dd>
+        <dt class="col-sm-3">Topic(*)</dt>
+        <dd class="col-sm-7">
+          <div class="input-group mb-3">
+            <select id="topic" class="form-select" v-model="topic" required>
+              <option value="" selected disabled>Please choose the topic from the dropdown menu</option>
+              <option value="ANIMALS">Animals</option>
+              <option value="PEOPLE">People</option>
+              <option value="LANDSCAPE">Land,0scape</option>
+              <option value="ARCHITECTURE">Architecture</option>
+              <option value="STILLLIFE">Still-life</option>
+              <option value="MISCELLANEOUS">Miscellaneous</option>
+            </select>
+            <div class="invalid-feedback">Please choose a topic.</div>
+          </div>
+        </dd>
 
-      <dt class="col-sm-3">Difficulty level(*)</dt>
-      <dd class="col-sm-7">
-        <div class="input-group mb-3">
-          <select id="difficulty" class="form-select" v-model="difficulty">
-            <option value="" selected disabled>Please choose the difficulty level from the dropdown menu</option>
-            <option value="BEGINNER">Beginner</option>
-            <option value="MEDIUM">Medium</option>
-            <option value="ADVANCED">Advanced</option>
-          </select>
-        </div>
-      </dd>
+        <dt class="col-sm-3">Difficulty level(*)</dt>
+        <dd class="col-sm-7">
+          <div class="input-group mb-3">
+            <select id="difficulty" class="form-select" v-model="difficulty" required>
+              <option value="" selected disabled>Please choose the difficulty level from the dropdown menu</option>
+              <option value="BEGINNER">Beginner</option>
+              <option value="MEDIUM">Medium</option>
+              <option value="ADVANCED">Advanced</option>
+            </select>
+            <div class="invalid-feedback">Please choose a difficulty level.</div>
+          </div>
+        </dd>
 
-      <dt class="col-sm-3">Link(*)</dt>
-      <dd class="col-sm-7">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default2">Please paste the link here</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link" v-model="link">
-        </div>
-      </dd>
-    </dl>
-    <button type="submit" class="btn btn-light" onclick="location.href='../add-success'" id="button" @click="createEntry">Submit</button>
+        <dt class="col-sm-3">Link(*)</dt>
+        <dd class="col-sm-7">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default2">Please paste the link here</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="link" v-model="link" required>
+            <div class="invalid-feedback">Please provide the link.</div>
+          </div>
+        </dd>
+      </dl>
+    </form>
+    <!-- move onclick redirection to the createEntry happy path - how?! -->
+    <button type="submit" class="btn btn-light" id="button" onclick="location.href='../add-success'" @click="createEntry">Submit</button>
     <button class="btn btn-danger" type="reset" id="button2">Reset</button>
   </div>
 
@@ -75,33 +82,59 @@ export default {
       description: '',
       topic: '',
       difficulty: '',
-      link: ''
+      link: '',
+      serverValidationMessages: []
     }
   },
   methods: {
     createEntry () {
-      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries'
+      const valid = this.validate()
 
-      const myHeaders = new Headers()
-      myHeaders.append('Content-Type', 'application/json')
+      if (valid) {
+        const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries'
 
-      const payload = JSON.stringify({
-        title: this.title,
-        description: this.description,
-        topic: this.topic,
-        difficulty: this.difficulty,
-        link: this.link
-      })
+        const myHeaders = new Headers()
+        myHeaders.append('Content-Type', 'application/json')
 
-      const requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: payload,
-        redirect: 'follow'
+        const payload = JSON.stringify({
+          title: this.title,
+          description: this.description,
+          topic: this.topic,
+          difficulty: this.difficulty,
+          link: this.link
+        })
+
+        const requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: payload,
+          redirect: 'follow'
+        }
+
+        fetch(endpoint, requestOptions)
+          .then(response => response.text())
+          .catch(error => console.log('error', error))
       }
+    },
+    validate () {
+      let valid = true
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
 
-      fetch(endpoint, requestOptions)
-        .catch(error => console.log('error', error))
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              valid = false
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+      return valid
     }
   }
 }

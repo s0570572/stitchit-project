@@ -6,12 +6,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-nav">
-          <router-link class="nav-link" to="/entries-animals">Animals</router-link>
-          <router-link class="nav-link" to="/entries-people">People</router-link>
-          <router-link class="nav-link" to="/entries-landscape">Landscape</router-link>
-          <router-link class="nav-link" to="/entries-architecture">Architecture</router-link>
-          <router-link class="nav-link" to="/entries-still-life">Still-life</router-link>
-          <router-link class="nav-link" id="lastitem" to="/entries-miscellaneous">Miscellaneous</router-link>
+          <router-link class="nav-link" :to="{name: 'GalleryTopic', params: { topic: 'ANIMALS' },}">Animals</router-link>
+          <router-link class="nav-link" :to="{name: 'GalleryTopic', params: { topic: 'PEOPLE' },}">People</router-link>
+          <router-link class="nav-link" :to="{name: 'GalleryTopic', params: { topic: 'LANDSCAPE' },}">Landscape</router-link>
+          <router-link class="nav-link" :to="{name: 'GalleryTopic', params: { topic: 'ARCHITECTURE' },}">Architecture</router-link>
+          <router-link class="nav-link" :to="{name: 'GalleryTopic', params: { topic: 'STILLLIFE' },}">Still-life</router-link>
+          <router-link class="nav-link" :to="{name: 'GalleryTopic', params: { topic: 'MISCELLANEOUS' },}">Miscellaneous</router-link>
         </div>
       </div>
     </div>
@@ -19,9 +19,9 @@
 </template>
 
 <script>
+
 export default {
-  name: 'TopicTab',
-  components: {}
+  name: 'TopicTab'
 }
 </script>
 

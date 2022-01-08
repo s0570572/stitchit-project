@@ -65,13 +65,14 @@
 
 export default {
   name: 'AccordeonTopic',
+  inheritAttrs: false,
   data () {
     return {
       entries: []
     }
   },
   mounted () {
-    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries' + this.$route.params.topic
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries-by-' + this.$route.params.topic
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'

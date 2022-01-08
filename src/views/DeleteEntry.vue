@@ -21,7 +21,7 @@ export default {
   methods: {
     deleteEntry () {
       const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries/' + this.$route.params.entryid // + dynamic variable from the uri
-
+      console.log('test')
       const myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')
 

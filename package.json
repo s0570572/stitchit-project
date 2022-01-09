@@ -7,10 +7,10 @@
     "npm": "6.x"
   },
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "start": "node_modules/.bin/vue-cli-service serve",
+    "build": "node_modules/.bin/vue-cli-service build",
+    "test:unit": "node_modules/.bin/vue-cli-service test:unit",
+    "lint": "node_modules/.bin/vue-cli-service lint"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",
